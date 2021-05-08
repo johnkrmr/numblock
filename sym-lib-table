@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name keyboard_parts)(type Legacy)(uri /home/johannes/Dokumente/kiCad_parts/kicad_lib_tmk/keyboard_parts.lib)(options "")(descr ""))
+  (lib (name sofle_rgb)(type Legacy)(uri /home/johannes/Dokumente/SofleKeyboard/Sofle_RGB/PCB/SofleKeyboard.lib)(options "")(descr ""))
+)

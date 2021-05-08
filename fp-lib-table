@@ -1,0 +1,9 @@
+(fp_lib_table
+  (lib (name keebs)(type KiCad)(uri /home/johannes/Dokumente/kiCad_parts/keebs.pretty)(options "")(descr ""))
+  (lib (name keyboard_parts)(type KiCad)(uri /home/johannes/Dokumente/kiCad_parts/keyboard_parts.pretty)(options "")(descr ""))
+  (lib (name keyswitches)(type KiCad)(uri /home/johannes/Dokumente/kiCad_parts/keyswitches.pretty)(options "")(descr ""))
+  (lib (name nice60)(type KiCad)(uri /home/johannes/Dokumente/kiCad_parts/nice60/MX_Only.pretty)(options "")(descr ""))
+  (lib (name kailh)(type KiCad)(uri /home/johannes/Dokumente/kiCad_parts/keyswitch-kicad-library/modules/Switch_Keyboard_Kailh.pretty)(options "")(descr ""))
+  (lib (name sofle)(type KiCad)(uri /home/johannes/Dokumente/SofleKeyboard/footprints/SofleKeyboard-footprint.pretty)(options "")(descr ""))
+  (lib (name "sofle RGB")(type KiCad)(uri /home/johannes/Dokumente/SofleKeyboard/Sofle_RGB/PCB/SofleRGB.pretty)(options "")(descr ""))
+)
