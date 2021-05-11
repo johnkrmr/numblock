@@ -630,28 +630,22 @@ Text Label 1050 1800 0    50   ~ 0
 C2
 Wire Wire Line
 	4650 1450 4850 1450
-Text Label 4850 1450 0    50   ~ 0
-SW
 Wire Wire Line
 	1350 1600 1050 1600
 Text Label 1050 1600 0    50   ~ 0
 SW
-Text Label 3850 1450 0    50   ~ 0
-Rot1
-Text Label 3850 1650 0    50   ~ 0
-Rot2
 Wire Wire Line
 	3850 1650 4050 1650
 Wire Wire Line
 	4050 1450 3850 1450
-Text Label 2550 1900 2    50   ~ 0
-Rot1
 Text Label 2550 2000 2    50   ~ 0
+Rot1
+Text Label 2550 2100 2    50   ~ 0
 Rot2
 Wire Wire Line
-	2550 2000 2350 2000
+	2550 2100 2350 2100
 Wire Wire Line
-	2350 1900 2550 1900
+	2350 2000 2550 2000
 Text Label 1050 2600 0    50   ~ 0
 RX
 Text Label 1050 2500 0    50   ~ 0
@@ -1061,65 +1055,42 @@ $EndComp
 $Comp
 L Device:Rotary_Encoder_Switch SW22
 U 1 1 609EC679
-P 5900 1550
-F 0 "SW22" H 5900 1917 50  0000 C CNN
-F 1 "Rotary_Encoder_Switch" H 5900 1826 50  0000 C CNN
-F 2 "sofle RGB:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_NoMountingHoles" H 5750 1710 50  0001 C CNN
-F 3 "~" H 5900 1810 50  0001 C CNN
-	1    5900 1550
+P 7100 1650
+F 0 "SW22" H 7100 2017 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 7100 1926 50  0000 C CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_CircularMountingHoles" H 6950 1810 50  0001 C CNN
+F 3 "~" H 7100 1910 50  0001 C CNN
+	1    7100 1650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6200 1450 6400 1450
-Text Label 6400 1450 0    50   ~ 0
-SW
-Text Label 5400 1450 0    50   ~ 0
-Rot1
-Text Label 5400 1650 0    50   ~ 0
-Rot2
+	7900 1100 8100 1100
 Wire Wire Line
-	5400 1650 5600 1650
+	6050 1200 6250 1200
 Wire Wire Line
-	5600 1450 5400 1450
+	6250 1000 6050 1000
 $Comp
 L power:GND #PWR0105
 U 1 1 609ECC55
-P 6350 1650
-F 0 "#PWR0105" H 6350 1400 50  0001 C CNN
-F 1 "GND" V 6355 1522 50  0000 R CNN
-F 2 "" H 6350 1650 50  0001 C CNN
-F 3 "" H 6350 1650 50  0001 C CNN
-	1    6350 1650
+P 7550 1550
+F 0 "#PWR0105" H 7550 1300 50  0001 C CNN
+F 1 "GND" V 7555 1422 50  0000 R CNN
+F 2 "" H 7550 1550 50  0001 C CNN
+F 3 "" H 7550 1550 50  0001 C CNN
+	1    7550 1550
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	6350 1650 6200 1650
-$Comp
-L power:GND #PWR0106
-U 1 1 609ECC60
-P 5500 1550
-F 0 "#PWR0106" H 5500 1300 50  0001 C CNN
-F 1 "GND" V 5505 1422 50  0000 R CNN
-F 2 "" H 5500 1550 50  0001 C CNN
-F 3 "" H 5500 1550 50  0001 C CNN
-	1    5500 1550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5500 1550 5600 1550
-Text Label 900  6400 0    50   ~ 0
-A0
-Text Label 900  6600 0    50   ~ 0
-A1
+	7550 1550 7400 1550
 Wire Wire Line
 	1200 6600 900  6600
 Wire Wire Line
 	1200 6400 900  6400
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H7
 U 1 1 60A6EC20
 P 1300 6400
-F 0 "H?" V 1254 6550 50  0000 L CNN
+F 0 "H7" V 1254 6550 50  0000 L CNN
 F 1 "MountingHole_Pad" V 1345 6550 50  0000 L CNN
 F 2 "sofle RGB:hole_30mil" H 1300 6400 50  0001 C CNN
 F 3 "~" H 1300 6400 50  0001 C CNN
@@ -1127,22 +1098,136 @@ F 3 "~" H 1300 6400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H?
+L Mechanical:MountingHole_Pad H8
 U 1 1 60A6EC2A
 P 1300 6600
-F 0 "H?" V 1254 6750 50  0000 L CNN
+F 0 "H8" V 1254 6750 50  0000 L CNN
 F 1 "MountingHole_Pad" V 1345 6750 50  0000 L CNN
 F 2 "sofle RGB:hole_30mil" H 1300 6600 50  0001 C CNN
 F 3 "~" H 1300 6600 50  0001 C CNN
 	1    1300 6600
 	0    1    1    0   
 $EndComp
-Text Label 2550 1700 2    50   ~ 0
+Text Label 8100 1100 0    50   ~ 0
+SW
+Text Label 4850 1450 0    50   ~ 0
+SW
+Text Label 6050 1200 0    50   ~ 0
+Rot2
+Text Label 6050 1000 0    50   ~ 0
+Rot1
+Text Label 3850 1650 0    50   ~ 0
+Rot2
+Text Label 3850 1450 0    50   ~ 0
+Rot1
+Text Label 900  6400 0    50   ~ 0
 A0
-Text Label 2550 1800 2    50   ~ 0
+Text Label 900  6600 0    50   ~ 0
 A1
 Wire Wire Line
 	2550 1800 2350 1800
 Wire Wire Line
 	2350 1700 2550 1700
+Text Label 2550 1700 2    50   ~ 0
+A0
+Text Label 2550 1800 2    50   ~ 0
+A1
+$Comp
+L Mechanical:MountingHole_Pad H9
+U 1 1 60B49CAD
+P 6350 1000
+F 0 "H9" V 6304 1150 50  0000 L CNN
+F 1 "MountingHole_Pad" V 6395 1150 50  0000 L CNN
+F 2 "sofle RGB:hole_30mil" H 6350 1000 50  0001 C CNN
+F 3 "~" H 6350 1000 50  0001 C CNN
+	1    6350 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H13
+U 1 1 60B4A2C5
+P 6350 1200
+F 0 "H13" V 6304 1350 50  0000 L CNN
+F 1 "MountingHole_Pad" V 6395 1350 50  0000 L CNN
+F 2 "sofle RGB:hole_30mil" H 6350 1200 50  0001 C CNN
+F 3 "~" H 6350 1200 50  0001 C CNN
+	1    6350 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H10
+U 1 1 60B4A2CF
+P 6700 1550
+F 0 "H10" V 6654 1700 50  0000 L CNN
+F 1 "MountingHole_Pad" V 6745 1700 50  0000 L CNN
+F 2 "sofle RGB:hole_30mil" H 6700 1550 50  0001 C CNN
+F 3 "~" H 6700 1550 50  0001 C CNN
+	1    6700 1550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H12
+U 1 1 60B4A2D9
+P 7800 1100
+F 0 "H12" V 7754 1250 50  0000 L CNN
+F 1 "MountingHole_Pad" V 7845 1250 50  0000 L CNN
+F 2 "sofle RGB:hole_30mil" H 7800 1100 50  0001 C CNN
+F 3 "~" H 7800 1100 50  0001 C CNN
+	1    7800 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 60B65776
+P 6500 1650
+F 0 "#PWR0106" H 6500 1400 50  0001 C CNN
+F 1 "GND" V 6505 1522 50  0000 R CNN
+F 2 "" H 6500 1650 50  0001 C CNN
+F 3 "" H 6500 1650 50  0001 C CNN
+	1    6500 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H11
+U 1 1 60B6D9A7
+P 7500 1750
+F 0 "H11" V 7454 1900 50  0000 L CNN
+F 1 "MountingHole_Pad" V 7545 1900 50  0000 L CNN
+F 2 "sofle RGB:hole_30mil" H 7500 1750 50  0001 C CNN
+F 3 "~" H 7500 1750 50  0001 C CNN
+	1    7500 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H14
+U 1 1 60B7E845
+P 6700 1750
+F 0 "H14" V 6654 1900 50  0000 L CNN
+F 1 "MountingHole_Pad" V 6745 1900 50  0000 L CNN
+F 2 "sofle RGB:hole_30mil" H 6700 1750 50  0001 C CNN
+F 3 "~" H 6700 1750 50  0001 C CNN
+	1    6700 1750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6500 1650 6800 1650
+Wire Wire Line
+	2550 1900 2350 1900
+Text Label 2550 1900 2    50   ~ 0
+A2
+Wire Wire Line
+	1200 6800 900  6800
+$Comp
+L Mechanical:MountingHole_Pad H15
+U 1 1 60C0B11C
+P 1300 6800
+F 0 "H15" V 1254 6950 50  0000 L CNN
+F 1 "MountingHole_Pad" V 1345 6950 50  0000 L CNN
+F 2 "sofle RGB:hole_30mil" H 1300 6800 50  0001 C CNN
+F 3 "~" H 1300 6800 50  0001 C CNN
+	1    1300 6800
+	0    1    1    0   
+$EndComp
+Text Label 900  6800 0    50   ~ 0
+A2
 $EndSCHEMATC
