@@ -757,16 +757,14 @@ F 3 "" H 4600 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 8900 1500 1150 550 
+S 10000 1250 1150 550 
 U 60AEFC05
 F0 "leds" 50
 F1 "leds.sch" 50
-F2 "led_pin" I L 8900 1700 50 
+F2 "led_pin" I L 10000 1450 50 
 $EndSheet
-Text Label 8600 1700 0    50   ~ 0
+Text Label 8750 1450 0    50   ~ 0
 LED
-Wire Wire Line
-	8600 1700 8900 1700
 $Comp
 L sofle_rgb:SW_PUSH-MX_W_LED SW5
 U 1 1 60B482E6
@@ -1230,4 +1228,80 @@ F 3 "~" H 1300 6800 50  0001 C CNN
 $EndComp
 Text Label 900  6800 0    50   ~ 0
 A2
+$Comp
+L LED:SK6812MINI D26
+U 1 1 60A321EC
+P 9450 1450
+F 0 "D26" H 9794 1496 50  0000 L CNN
+F 1 "SK6812MINI" H 9794 1405 50  0000 L CNN
+F 2 "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm" H 9500 1150 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 9550 1075 50  0001 L TNN
+	1    9450 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60A4B915
+P 9450 900
+AR Path="/60AEFC05/60A4B915" Ref="#PWR?"  Part="1" 
+AR Path="/60A4B915" Ref="#PWR0122"  Part="1" 
+F 0 "#PWR0122" H 9450 750 50  0001 C CNN
+F 1 "+5V" V 9465 1028 50  0000 L CNN
+F 2 "" H 9450 900 50  0001 C CNN
+F 3 "" H 9450 900 50  0001 C CNN
+	1    9450 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60A4B91B
+P 9050 1000
+AR Path="/60AEFC05/60A4B91B" Ref="#PWR?"  Part="1" 
+AR Path="/60A4B91B" Ref="#PWR0123"  Part="1" 
+F 0 "#PWR0123" H 9050 750 50  0001 C CNN
+F 1 "GND" H 9055 827 50  0000 C CNN
+F 2 "" H 9050 1000 50  0001 C CNN
+F 3 "" H 9050 1000 50  0001 C CNN
+	1    9050 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9050 1000 9100 1000
+Wire Wire Line
+	9400 1000 9450 1000
+Wire Wire Line
+	9450 1000 9450 900 
+Wire Wire Line
+	9450 1150 9450 1000
+Connection ~ 9450 1000
+$Comp
+L Device:C C?
+U 1 1 60A4B926
+P 9250 1000
+AR Path="/60AEFC05/60A4B926" Ref="C?"  Part="1" 
+AR Path="/60A4B926" Ref="C26"  Part="1" 
+F 0 "C26" H 9365 1046 50  0000 L CNN
+F 1 "C" H 9365 955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 9288 850 50  0001 C CNN
+F 3 "~" H 9250 1000 50  0001 C CNN
+	1    9250 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0124
+U 1 1 60A5FD08
+P 9450 1850
+F 0 "#PWR0124" H 9450 1600 50  0001 C CNN
+F 1 "GND" H 9455 1677 50  0000 C CNN
+F 2 "" H 9450 1850 50  0001 C CNN
+F 3 "" H 9450 1850 50  0001 C CNN
+	1    9450 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 1850 9450 1750
+Wire Wire Line
+	8750 1450 9150 1450
+Wire Wire Line
+	9750 1450 10000 1450
 $EndSCHEMATC
