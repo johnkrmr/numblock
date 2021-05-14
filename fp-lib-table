@@ -6,4 +6,5 @@
   (lib (name kailh)(type KiCad)(uri /home/johannes/Dokumente/kiCad_parts/keyswitch-kicad-library/modules/Switch_Keyboard_Kailh.pretty)(options "")(descr ""))
   (lib (name sofle)(type KiCad)(uri /home/johannes/Dokumente/SofleKeyboard/footprints/SofleKeyboard-footprint.pretty)(options "")(descr ""))
   (lib (name "sofle RGB")(type KiCad)(uri /home/johannes/Dokumente/SofleKeyboard/Sofle_RGB/PCB/SofleRGB.pretty)(options "")(descr ""))
+  (lib (name general)(type KiCad)(uri /home/johannes/Dokumente/kiCad_parts)(options "")(descr ""))
 )
