@@ -1,6 +1,12 @@
 # Numblock #
 A small 4x5 numblock to get into pcb design and custom keyboards.
 
+<img src="/front.png" alt="pcb front view" style="height: 400px"/>
+<img src="/back.png" alt="pcb bottom view" style="height: 400px"/>
+
+
+![pcb front](front.jpg "pcb front") ![pcb back](back.jpg "pcb back")
+
 ## IMPORTANT ##
 PCB not tested yet. There's no guarantee that it will work right now!  
 Front panel needed to mount 3-pin switches. No files for that provided yet.  
