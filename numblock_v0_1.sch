@@ -1056,7 +1056,7 @@ U 1 1 609EC679
 P 7100 1650
 F 0 "SW22" H 7100 2017 50  0000 C CNN
 F 1 "Rotary_Encoder_Switch" H 7100 1926 50  0000 C CNN
-F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_CircularMountingHoles" H 6950 1810 50  0001 C CNN
+F 2 "sofle RGB:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm-keebio_modified" H 6950 1810 50  0001 C CNN
 F 3 "~" H 7100 1910 50  0001 C CNN
 	1    7100 1650
 	1    0    0    -1  
