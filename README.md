@@ -1,5 +1,5 @@
 # Numblock #
-A small 4x5 numblock to get into pcb design and custom keyboards.
+A small 4x5 diy keypad to get into pcb design and custom keyboards.
 
 ![pcb front](front.jpg "pcb front") ![pcb back](back.jpg "pcb back")
 
@@ -49,6 +49,8 @@ designs without them. I do not know whether or not they are necessary.
 recommended. I forgot to add that on. Here as well many pcbs do not include
 them. It should work. [Supposedly](https://learn.adafruit.com/adafruit-neopixel-uberguide/basic-connections) what could happen is that the first LED in the 'chain' gets fried every
 once in a while.
+- A wireless version could be achieved with the nRF52840 in combination with the [LiIon/LiPoly
+Backpack](https://www.adafruit.com/product/2124).
 
 ## Resources ##
 - [Josef Adamcik's sofle
