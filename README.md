@@ -43,6 +43,7 @@ one](https://www.waveshare.com/wiki/0.91inch_OLED_Module) should fit perfectly
 - rubber feet (otherwise typing won't be much fun)
 
 ## Notes ##
+### Electronics ###
 - 0.1μF capacitors are recommended according to the datasheet. There are many
 designs without them. I do not know whether or not they are necessary.
 - A resistor on the LED data line between the controller and the first led is
@@ -51,6 +52,16 @@ them. It should work. [Supposedly](https://learn.adafruit.com/adafruit-neopixel-
 once in a while.
 - A wireless version could be achieved with the nRF52840 in combination with the [LiIon/LiPoly
 Backpack](https://www.adafruit.com/product/2124).
+
+### Software ###
+- I experienced some form of 'ghosting' in the upper two rows when setting
+columns to *high* and
+reading from row pins with *internal pulldowns* (diodes
+facing opposite way than shown in schematics). When holding 4
+switches down in same row, the 5th one shows as constantly on or
+continuously toggling. This does
+not seam to appear when setting rows to *low* and reading from columns with *internal
+pullups*. So I guess **use internal pullups** for scanning the matrix.
 
 ## Resources ##
 - [Josef Adamcik's sofle
