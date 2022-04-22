@@ -9,6 +9,12 @@
 #include <Keyboard.h>
 #include <Encoder.h>
 
+// use pullups (PULLUP) or pulldowns (standard)?
+//#define PULLUP
+
+// rows to cols (ROWCOL) or cols to rows (standard)
+#define ROWCOL
+
 // Pin names
 // Rows
 #define R1 MISO
@@ -151,7 +157,7 @@ static const uint8_t HID_ReportDescriptor_ConsumerControl[] PROGMEM =
 const uint8_t kTelephoneDrop = 1 << 1; // Bit 1
 static const uint8_t HID_ReportDescriptor_Telephony[] PROGMEM =
     {
-        0x05, 0x0b,                          // Usage Page ("Telephony Device")
+        0x05, 0x0b,          #define LED_PIN 5                // Usage Page ("Telephony Device")
         0x09, 0x06,                          // Usage (Programmable Button)
         0xa1, 0x01,                          // Collection (Application)
         0x85, kHID_ReportID_Telephony,       // "Report ID"
@@ -174,9 +180,9 @@ void setup()
   //Serial.begin(115200);
 
   // Setup LEDs
-  led.begin();
-  led.setBrightness(50);
-  led.updateAll();
+  //led.begin();
+  //led.setBrightness(50);
+  //led.updateAll();
 
   // init Keyboard
   Keyboard.begin();
@@ -194,6 +200,7 @@ void setup()
   attachInterrupt(RotBL, encL.service(), CHANGE);*/
 
   // init Matrix Pins
+  #if define(PULLUP)&&not defined(ROWCOL)
   pinMode(R1, OUTPUT);
   pinMode(R2, OUTPUT);
   pinMode(R3, OUTPUT);
@@ -207,6 +214,22 @@ void setup()
   pinMode(C3, INPUT_PULLUP);
   pinMode(C4, INPUT_PULLUP);
   pinMode(C5, INPUT_PULLUP);
+  #endif
+  #if not defined(PULLUP)&&defined(ROWCOL)
+    pinMode(R1, OUTPUT);
+    pinMode(R2, OUTPUT);
+    pinMode(R3, OUTPUT);
+    pinMode(R4, OUTPUT);
+    digitalWrite(R1, HIGH);
+    digitalWrite(R2, HIGH);
+    digitalWrite(R3, HIGH);
+    digitalWrite(R4, HIGH);
+    pinMode(C1, INPUT_PULLDOWN);
+    pinMode(C2, INPUT_PULLDOWN);
+    pinMode(C3, INPUT_PULLDOWN);
+    pinMode(C4, INPUT_PULLDOWN);
+    pinMode(C5, INPUT_PULLDOWN);
+  #endif
 
   // init Matrix interrupts
   /*attachInterrupt(R1, scanMatrix, CHANGE);
@@ -232,7 +255,7 @@ void loop()
   }*/
   //encoderRotation();
 
-  delay(10);
+  //delay(10);
   /*uint16_t i;
 
   // 'Color wipe' across all pixels
@@ -261,6 +284,7 @@ void loop()
 
 void scanMatrix()
 {
+  #if define(PULLUP)&&not defined(ROWCOL)
   digitalWrite(C1, HIGH);
   digitalWrite(C2, HIGH);
   digitalWrite(C3, HIGH);
@@ -281,6 +305,21 @@ void scanMatrix()
   digitalWrite(C3, LOW);
   digitalWrite(C4, LOW);
   digitalWrite(C5, LOW);
+  #elif #if not defined(PULLUP)&&defined(ROWCOL)
+  digitalWrite(R1, LOW);
+  digitalWrite(R2, LOW);
+  digitalWrite(R3, LOW);
+  digitalWrite(R4, LOW);
+  for (int i = 0; i < NUM_ROWS; i++)
+  {
+    digitalWrite(row[i], HIGH);
+    for (int j = 0; j < NUM_COLS; j++)
+    {
+      matrix[i][j]=digitalRead(column[j]);
+    }
+    digitalWrite(row[i], LOW);
+  }
+  #endif
 }
 
 /*void encoderRotation()
@@ -363,14 +402,6 @@ void getKeys()
   {
     for (int j = 0; j < NUM_COLUMNS; j++)
     {
-      if (i==3&&j==1)
-      {
-        if (matrix[i][j] == 0 && matrixOld[i][j] == 1)
-        {
-          mute();
-        }
-      }
-      else{
         if (matrix[i][j] == 0 && matrixOld[i][j] == 1)
         {
           Keyboard.press(layout[i][j]);
@@ -379,7 +410,6 @@ void getKeys()
         {
           Keyboard.release(layout[i][j]);
         }
-      }
       matrixOld[i][j] = matrix[i][j];
     }
   }

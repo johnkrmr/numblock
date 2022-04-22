@@ -29,7 +29,7 @@ public:
     void updateAll(void);
 
 private:
-    uint16_t m_pixelCount = 26;
+    uint16_t m_pixelCount = 1;
     uint8_t m_pixelPin = 5;
     neoPixelType m_pixelType = NEO_GBR;
     uint16_t m_dotStarCount = 1;
