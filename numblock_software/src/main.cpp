@@ -5,7 +5,7 @@
 #include <Adafruit_NeoPixel.h>
 #include <Adafruit_NeoMatrix_ZeroDMA.h>
 #include <Adafruit_DotStar.h>
-//#include <leds.h>
+#include <leds.h>
 #include <Keyboard.h>
 #include <Encoder.h>
 
@@ -60,7 +60,7 @@ uint8_t layer = 0;
 
 int matrixInterrupts = 0;
 
-//Leds led = Leds();
+Leds led = Leds();
 
 //declare Functions
 void scanMatrix();
@@ -174,9 +174,9 @@ void setup()
   //Serial.begin(115200);
 
   // Setup LEDs
-  /*led.begin();
+  led.begin();
   led.setBrightness(50);
-  led.updateAll();*/
+  led.updateAll();
 
   // init Keyboard
   Keyboard.begin();

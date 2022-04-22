@@ -4,7 +4,7 @@
 //#define PULLUP
 
 // rows to cols (ROWCOL) or cols to rows (standard)
-//#define ROWCOL
+#define ROWCOL
 
 // Matrix Layout
 #define NUM_ROWS 4
@@ -95,7 +95,7 @@ void loop()
 
 void scanMatrix()
 {
-  #if (defined(PULLUP)&&not defined(ROWCOL))||(defined(PULLUP)&&defined(ROWCOL))
+  #if (defined(PULLUP)&&not defined(ROWCOL))||(not defined(PULLUP)&&defined(ROWCOL))
   // make sure all pins are in right state
   digitalWrite(R1, !ON);
   digitalWrite(R2, !ON);
